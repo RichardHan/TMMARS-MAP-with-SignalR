@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Detection Map</title>
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <script type="text/javascript" src="js/configuration.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!--Reference the SignalR library. -->
+    <script src="Scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="/signalr/hubs"></script>
+
+    <script>
+        $(function () {
+            $.connection.hub.start().done(function () {
+
+                //var marsHub = $.connection.mARSHub;
+                $.connection.mARSHub.server.updateDailyNumber();
+                $.connection.mARSHub.server.updatenews();
+                $.connection.mARSHub.server.updatedots();
+                $.connection.mARSHub.server.updatecircles();
+                $.connection.mARSHub.server.updatetopApp();
+                $.connection.mARSHub.server.updatetopVirus();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -173,15 +173,54 @@
 
     //default update
     var update = function (sName) {
-        
-        
-        //console.log("sName:" + sName + "   " + dataSources[sName]);
-        var decoratedDataSource = addRegionToDataSource(addRandomToDataSource(dataSources[sName]));
-        //console.log(decoratedDataSource);
-        $.getJSON(decoratedDataSource, function (response) {
-            var fnCallback = window["cbUpdate_" + sName];
-            fnCallback(response);
-        });        
+
+
+        //var marsHub = $.connection.mARSHub;
+
+        //marsHub.client.updateDailyNumber = function (result) {
+        //    var fnCallback = window["cbUpdate_" + sName];
+        //    fnCallback($.parseJSON(result));
+        //};
+
+        //$.connection.mARSHub.client.updatenews = function (result) {
+        //    debugger;
+        //    var fnCallback = window["cbUpdate_news"];
+        //    fnCallback($.parseJSON(result));
+        //};
+
+        //window["$"]["connection"]["mARSHub"]["client"]["update" + sName] = function (result) {
+        //    debugger;
+        //    var fnCallback = window["cbUpdate_" + sName];
+        //    fnCallback($.parseJSON(result));
+        //};
+
+
+        //$.connection.hub.start().done(function () {
+
+        //    $.connection.mARSHub.client.updatenews = function (result) {
+        //        debugger;
+        //        //var fnCallback = window["cbUpdate_news"];
+        //        //fnCallback($.parseJSON(result));
+        //    };
+
+        //});
+
+
+        //marsHub.start().done(function () {
+        //debugger;
+        //var _funStart = window["$"]["connection"]["mARSHub"]["server"]["update" + sName];
+        ////var _fun = window["$"]["connection"]["mARSHub"]["server"]["update" + sName];
+        ////marsHub.server.updateDailyNumber();
+        //_funStart();
+
+        //$.connection.mARSHub.server.updatenews();
+        //});
+
+        //var decoratedDataSource = addRegionToDataSource(addRandomToDataSource(dataSources[sName]));        
+        //$.getJSON(decoratedDataSource, function (response) {
+        //    var fnCallback = window["cbUpdate_" + sName];
+        //    fnCallback(response);
+        //});        
     };
 
     var addRandomToDataSource = function (dataSource) {

@@ -14,31 +14,29 @@ var addRandomToDataSource = function (dataSource) {
     return dataSource + "?random=" + Math.random();
 };
 
+//function GetCurrentNum() {
+//    var url = addRandomToDataSource(configuration.dataSources["dailyNumber"]);
+//    //not sure why need detect browser for IE.
+//    if (BrowserDetect.browser == "Explorer" && window.XDomainRequest) {
+//        var xdr = new XDomainRequest();
+//        xdr.onload = function () {
+//            var data = $.parseJSON(xdr.responseText);
+//            if (data == null || typeof (data) == 'undefined') {
+//                data = $.parseJSON(data.firstChild.textContent);
+//            }
+//            GetdataFromAPI_JSON = data;
+//            UpdateUINumber(data);
+//        };
+//        xdr.onerror = function (e) {
 
-function GetCurrentNum() {
-   var url = addRandomToDataSource(configuration.dataSources["dailyNumber"]);
-   //not sure why need detect browser for IE.
-   if (BrowserDetect.browser == "Explorer" && window.XDomainRequest) {
-       var xdr = new XDomainRequest();
-       xdr.onload = function () {
-           var data = $.parseJSON(xdr.responseText);
-           if (data == null || typeof (data) == 'undefined') {
-               data = $.parseJSON(data.firstChild.textContent);
-           }
-           GetdataFromAPI_JSON = data;
-           UpdateUINumber(data);
-       };
-       xdr.onerror = function (e) {
+//        }
+//        xdr.open("GET", url);
+//        xdr.send();
 
-       }
-       xdr.open("GET", url);
-       xdr.send();
-
-   } else {
-       $.getJSON(url, GetdataFromAPI);
-   }
-}
-
+//    } else {
+//        $.getJSON(url, GetdataFromAPI);
+//    }
+//}
 
 function UpdateUINumber(json) {
     var queryNumFromServer = json[0][0];
@@ -84,10 +82,10 @@ function UpdateDailyMars() {
 }
 
 $(function () {    
-    GetCurrentNum();
+    //GetCurrentNum();
     RefreshUINumber();
 });
 
-setInterval(UpdateDailyMars, 1000);
-setInterval(GetCurrentNum, 1000 * 60); //1 minute 
-setInterval(RefreshUINumber, 1000);
+//setInterval(UpdateDailyMars, 1000);
+//setInterval(GetCurrentNum, 1000 * 60); //1 minute 
+//setInterval(RefreshUINumber, 1000);

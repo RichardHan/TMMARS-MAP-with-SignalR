@@ -54,10 +54,8 @@ var checkUpdate = function (now, sName) {
     }
 };
 
-var update = function (sName) {
-
-    //console.log("sName:" + sName + "   " + dataSources[sName]);
-    var decoratedDataSource = addRegionToDataSource(addRandomToDataSource(dataSources[sName]));
+var update = function (sName) {    
+    var decoratedDataSource = addRegionToDataSource(addRandomToDataSource(dataSources[sName]));    
     $.getJSON(decoratedDataSource, function(response) {
     	var fnCallback = callBack["cbUpdate_" + sName];
     	fnCallback(response);
@@ -83,9 +81,9 @@ var callBack = {
     cbUpdate_topApp: function (json) {
         cbUpdate_pie(json, "topApp", "Top 5 Apps");
     },
-    cbUpdate_topArea: function (json) {
-        cbUpdate_pie(json, "topArea", "Top 5 Regions");
-    }
+    //cbUpdate_topArea: function (json) {
+    //    cbUpdate_pie(json, "topArea", "Top 5 Regions");
+    //}
 };
 
 function cbUpdate_pie(json, container, pieTitle) {

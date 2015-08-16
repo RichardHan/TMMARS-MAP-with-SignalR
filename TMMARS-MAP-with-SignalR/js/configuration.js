@@ -12,9 +12,9 @@ var realDataSources = {
     topApp: "https://njdc.rest.mars.trendmicro.com/akamailog/top-app",
     //topArea: "https://njdc.rest.mars.trendmicro.com/akamailog/top-area",
     news: "https://njdc.rest.mars.trendmicro.com/akamailog/log",
-    dots: "https://njdc.rest.mars.trendmicro.com/akamailog/base"
+    dots: "https://njdc.rest.mars.trendmicro.com/akamailog/base",
+    dailyNumber: "https://njdc.rest.mars.trendmicro.com/akamailog/daily-scanned-number"
 };
-
 
 configuration.dataSources = realDataSources;
 configuration.colors = {
