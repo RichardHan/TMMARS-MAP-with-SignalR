@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Detection Map</title>    
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <div id="dailyMars" style="TEXT-ALIGN: center;">
+        <span class="title">Apps scanned:</span>
+        <span id="appNum"> </span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="title">Malware detected:</span>
+        <span id="virusNum"> </span>
+    </div>
+    <div id="map" class="clear">
+        <div id="container" style="position: relative; width: 100%; height: 100%; ">
+            <img src="images/worldmap1280x500.png" style="position:absolute" width="1280" height="500">
+            <canvas id="backCanvas" width="3000" height="2000" style="position:absolute"> </canvas>
+            <canvas id="demoCanvas" width="3000" height="2000" style="position:absolute"> </canvas>
+        </div>
+    </div>
+    <div id="topVirus" class="pie">
+    </div>
+    <div id="topApp" class="pie">
+    </div>
+    <div id="marquee_box">
+        <ul id="marquee" class="marquee"></ul>
+    </div>
+    <!-- JS Lib -->
+    <script type="text/javascript" src="js/namespace.js"></script>
+    <script type="text/javascript" src="js/configuration.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/easeljs-0.5.0.min.js"></script>
+    <script type="text/javascript" src="js/tweenjs-0.3.0.min.js"></script>
+    <script type="text/javascript" src="js/BrowserDetect.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script type="text/javascript" src="js/exporting.js"></script>
+    <!-- JS Init -->
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/dailyMars.js"></script>
+    <script type="text/javascript" src="js/pie.js"></script>
+    <script type="text/javascript" src="js/resize.js"></script>
+</body>
+</html>
