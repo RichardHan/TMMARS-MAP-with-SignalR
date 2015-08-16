@@ -3,36 +3,36 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TMMARS-MAP-with-SignalR", "http://localhost:46857", "{9083B6F2-63DF-421D-A4A7-ACF94C5DAAA2}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_46857"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\GitHub\TMMARS-MAP-with-SignalR\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_46857\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_46857"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\GitHub\TMMARS-MAP-with-SignalR\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_46857\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\GitHub\TMMARS-MAP-with-SignalR\"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDB6D38E-97C2-4189-A661-220A91F23852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMMARS-MAP-with-SignalR", "TMMARS-MAP-with-SignalR\TMMARS-MAP-with-SignalR.csproj", "{64E678C3-2791-4F9E-87EC-7507FC695B88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{BBD16378-5B93-4D89-A88D-E05042D87F6F}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{72DD4F2C-7ACE-45E9-AD58-112D8B825240}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\TMMARS-MAP-with-SignalR-WAWS-dev.json = PublishScripts\Configurations\TMMARS-MAP-with-SignalR-WAWS-dev.json
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9083B6F2-63DF-421D-A4A7-ACF94C5DAAA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9083B6F2-63DF-421D-A4A7-ACF94C5DAAA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E678C3-2791-4F9E-87EC-7507FC695B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E678C3-2791-4F9E-87EC-7507FC695B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E678C3-2791-4F9E-87EC-7507FC695B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E678C3-2791-4F9E-87EC-7507FC695B88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{72DD4F2C-7ACE-45E9-AD58-112D8B825240} = {BBD16378-5B93-4D89-A88D-E05042D87F6F}
 	EndGlobalSection
 EndGlobal
