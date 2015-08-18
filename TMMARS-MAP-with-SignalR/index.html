@@ -77,11 +77,15 @@
                 fnCallback($.parseJSON(result));
             };
 
-            $.connection.mARSHub.client.updateDailyNumber = function (result) {                
+            $.connection.mARSHub.client.updateDailyNumber = function (result) {
                 GetdataFromAPI_JSON = $.parseJSON(result);
                 UpdateUINumber($.parseJSON(result));
                 setInterval(RefreshUINumber, 1000);
                 setInterval(UpdateDailyMars, 1000);
+            };
+
+            $.connection.mARSHub.client.alertFromServer = function (result) {
+                alert(result);
             };
 
             $.connection.hub.start().done(function () {

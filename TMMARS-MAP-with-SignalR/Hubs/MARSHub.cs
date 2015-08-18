@@ -9,11 +9,6 @@ namespace TMMARS_MAP_with_SignalR
 {
     public class MARSHub : Hub
     {
-        //public void Send(string name, string message)
-        //{
-        //    Clients.All.addNewMessageToPage(name, message);
-        //}
-
 
         public void Updatedots()
         {
